@@ -1,0 +1,35 @@
+Essa tarefa visa consolidar o aprendizado de funções e também criar uma base para aplicação com arquivo em C, que veremos adiante.
+
+Um dos fundamentos de aplicações que lidam com dados é o acrônimo CRUD que em inglês se refere às operações Create (Criar), Read (Ler), Update (Atualizar) e Delete (Excluir) que são realizadas em linhas de tabela de banco de dados relacional ou registros em arquivos de dados.
+
+Para este tipo de aplicação também se costuma usar bibliotecas que facilitam a apresentação dos registros de dados, assim como um cadastro de funcionário, contendo código, nome, data de nascimento, telefone, salário, etc., ou seja campos de diversos tipos de conteúdo, textuais e numéricos.
+
+Essa tarefa requer que seja elaborada uma biblioteca com funções baseadas em uma tela de terminal (modo texto) de 24 linhas por 80 colunas e com capacidade para imprimir caracteres em cores e caracteres estendidos da Tabela ASCII. Essas funções são as seguintes:
+
+
+inicializar_tela(), onde essa função define a tela do terminal conforme definido acima.
+
+janela(Lin Inicial, Col Inicial, Lin Final, Col Final, Título, Tipo de Moldura), onde:
+- Linha e colunas iniciais representam a coordenada do canto superior esquerdo;
+- Linha e colunas finais representam a coordenada do canto inferior direito;
+
+- Título é o texto a ser mostrado de forma centralizada no meio da linha superior da janela;
+
+- Tipo de moldura indica se o conjunto de caracteres estendidos da ASCII serão os de linha simples ou dupla.
+
+label(Lin, Col, Texto), onde:
+- Lin e Col representa a coordenada a partir de onde será mostrado o texto;
+- Texto é o rótulo (label) que identifica o campo a que se refere.
+
+string ler_string(Lin, Col, Tamanho), onde:
+- Lin e Col representa a coordenada a partir de onde será lido o texto;
+- Tamanho é o número de caracteres a ser lido para a string e no máximo 50.
+
+inteiro ler_inteiro(Lin, Col, Tamanho), onde:
+- Lin e Col representa a coordenada a partir de onde será lido o texto;
+- Tamanho é o número de dígitos do valor a ser lido e deve ser no máximo 10.
+
+decimal ler_decimal(Lin, Col, Tamanho), onde:
+- Lin e Col representa a coordenada a partir de onde será lido o texto;
+- Tamanho é o número de dígitos do valor a ser lido e no máximo 10.
+- Obs.: O valor deve ser lido com uso de vírgula para separar decimais, mas retornar float.

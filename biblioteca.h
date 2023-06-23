@@ -1,0 +1,1 @@
+void janela(int xInicial, int yInicial, int xFinal, int yFinal);
