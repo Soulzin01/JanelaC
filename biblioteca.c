@@ -1,8 +1,9 @@
+#include "biblioteca.h"
 #include <stdio.h>
 
 void janela(int xInicial, int yInicial, int xFinal, int yFinal){
-    for(int i = 1; i <= xInicial; i++){
-        for(int j = 1; j <= yInicial; j++){
+    for(int i = xInicial; i <= xFinal; i++){
+        for(int j = yInicial; j <= yFinal; j++){
             printf("-");
         }
     }
