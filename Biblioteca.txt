@@ -17,6 +17,8 @@ janela(Lin Inicial, Col Inicial, Lin Final, Col Final, Título, Tipo de Moldura)
 
 - Tipo de moldura indica se o conjunto de caracteres estendidos da ASCII serão os de linha simples ou dupla.
 
+DONE
+
 label(Lin, Col, Texto), onde:
 - Lin e Col representa a coordenada a partir de onde será mostrado o texto;
 - Texto é o rótulo (label) que identifica o campo a que se refere.

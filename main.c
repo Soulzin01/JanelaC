@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
+#include "biblioteca.h"
 
 int main()
 {
-    int linha = 5, coluna = 10;
-
+    int borda;
+    char titulo[20];
+    scanf("%d", &borda);
+    fflush(stdin);
+    fgets(titulo, 20, stdin);
     system("cls"); // limpa a tela
-
-    gotoxy(coluna, linha); // vai para a posição coluna 10, linha 5
-
-    printf("%c", 204);
-
-    sleep(2); // espera 2 segundos
-
-    getchar(); // espera uma entrada do teclado
+    janela(1, 1, 80, 24, titulo, borda);
 
     return 0;
 }
