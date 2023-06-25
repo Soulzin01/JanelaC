@@ -23,6 +23,8 @@ label(Lin, Col, Texto), onde:
 - Lin e Col representa a coordenada a partir de onde será mostrado o texto;
 - Texto é o rótulo (label) que identifica o campo a que se refere.
 
+DONE
+
 string ler_string(Lin, Col, Tamanho), onde:
 - Lin e Col representa a coordenada a partir de onde será lido o texto;
 - Tamanho é o número de caracteres a ser lido para a string e no máximo 50.

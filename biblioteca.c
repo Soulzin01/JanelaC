@@ -4,7 +4,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void janela();
+// void janela();
+// void label();
+// char ler_string();
+
 void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
 
 void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20], int tipoMold)
@@ -46,5 +49,12 @@ void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20],
                 printf("%c", (tipoMold == 1) ? 205 : 196);
             }
         }
+    }
+}
+
+void label(int lin, int col, char texto[24]){
+    for(int i = 0; i <= strlen(texto); i++){
+        gotoxy(lin+i, col);
+        printf("%c", texto[i]);
     }
 }
