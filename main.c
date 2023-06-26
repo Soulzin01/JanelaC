@@ -8,9 +8,10 @@ int main()
 {
     int borda;
     char titulo[24];
-    printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)");
+    printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)\n");
     scanf("%d", &borda);
     fflush(stdin);
+    printf("Digite o título que estará na parte superior da página:\n");
     fgets(titulo, sizeof(titulo), stdin);
     system("cls"); // limpa a tela
     janela(1, 1, 80, 24, titulo, borda);
