@@ -5,11 +5,19 @@
 #include <unistd.h>
 #include <math.h>
 
-// void janela();
-// void label();
-// char ler_string();
-
 void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
+
+void inicializar_tela(){
+    int borda;
+    char titulo[24];
+    printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)\n");
+    scanf("%d", &borda);
+    fflush(stdin);
+    printf("Digite o título que estará na parte superior da página:\n");
+    fgets(titulo, sizeof(titulo), stdin);
+    system("cls"); // limpa a tela
+    janela(1, 1, 80, 24, titulo, borda);
+}
 
 void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20], int tipoMold)
 {
@@ -54,8 +62,7 @@ void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20],
 }
 
 void label(int lin, int col, char texto[24]){
-    for(int i = 0; i <= strlen(texto); i++){
-        gotoxy(lin+i, col);
-        printf("%c", texto[i]);
-    }
+    printf("%d", strlen(texto));
+    gotoxy(lin, col);
+    for(int j = 0; j <= strlen(texto); j++){ printf("%c", texto[j]); }
 }
