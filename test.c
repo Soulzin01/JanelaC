@@ -1,14 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
+
 int main()
 {
-    char test[20];
-
-    scanf("%s", test);
-    printf("%s\n", test);
-    for(int i = 0; i <= (int)strlen(test)-1; i++){
-        printf("%d",(int)strlen(test));
-        printf("%c\n", test[i]);
-    }
+    int sal = (11 + 2 - 1) / 2;
+    printf("%d", sal);
     return 0;
 }

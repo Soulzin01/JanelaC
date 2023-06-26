@@ -20,6 +20,7 @@ int main()
     scanf("%d", &linha);
     printf("Defina a posição Y do texto: ");
     scanf("%d", &coluna);
+    fflush(stdin);
     char texto[24];
     fgets(texto, sizeof(texto), stdin);
     label(linha, coluna, texto);

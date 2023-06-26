@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <math.h>
 
 // void janela();
 // void label();
@@ -42,7 +43,7 @@ void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20],
             {
                 if(i == (xFinal/2)-((int)strlen(titulo)/2)){
                     printf("%s", titulo);
-                }else if(i >= (xFinal/2)+((int)strlen(titulo)/2) || i < (xFinal/2)-((int)strlen(titulo)/2)){
+                }else if(i >= (xFinal/2)+((int)((strlen(titulo + 2 - 1))/2)) || i < (xFinal/2)-((int)floor(strlen(titulo)/2))){
                     printf("%c", (tipoMold == 1) ? 205 : 196);
                 }
             }else if(j == yFinal){
