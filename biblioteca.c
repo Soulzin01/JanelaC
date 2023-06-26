@@ -62,7 +62,31 @@ void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20],
 }
 
 void label(int lin, int col, char texto[24]){
-    printf("%d", strlen(texto));
     gotoxy(lin, col);
     for(int j = 0; j <= strlen(texto); j++){ printf("%c", texto[j]); }
+}
+
+void ler_string(char *texto, int lin, int col){
+    gotoxy(lin, col);
+    scanf("%[^\n]s", texto);
+    getchar();
+}
+
+void ler_inteiro(int *inteiro, int lin, int col){
+    gotoxy(lin, col);
+    scanf("%d", inteiro);
+    getchar();
+}
+
+void ler_decimal(char *decimal, int lin, int col){
+    gotoxy(lin, col);
+    scanf("%[^\n]f", decimal);
+    getchar();
+    for(int i = 0; i <= strlen(decimal); i++){
+        if(decimal[i] == ','){
+            decimal[i] = '.';
+            atof(decimal);
+            break;
+        }
+    }
 }
