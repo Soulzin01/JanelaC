@@ -8,7 +8,7 @@ int main()
 {
     int borda;
     char titulo[24];
-    
+    printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)");
     scanf("%d", &borda);
     fflush(stdin);
     fgets(titulo, sizeof(titulo), stdin);
@@ -18,11 +18,13 @@ int main()
     int linha, coluna;
     printf("Defina a posição X do texto: ");
     scanf("%d", &linha);
+    fflush(stdin);
+
     printf("Defina a posição Y do texto: ");
     scanf("%d", &coluna);
     fflush(stdin);
-    char texto[24];
-    fgets(texto, sizeof(texto), stdin);
+
+    char texto[24] = "LABEL";
     label(linha, coluna, texto);
 
     gotoxy(1,81);
