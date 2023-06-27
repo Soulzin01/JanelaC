@@ -24,7 +24,7 @@ void inicializar_tela(){
     fflush(stdin);
     printf("Digite o título que estará na parte superior da página:\n");
     fgets(titulo, sizeof(titulo), stdin);
-    system("cls"); // limpa a tela
+    system("cls || clear"); // limpa a tela
     janela(1, 1, valorX, valorY, titulo, borda);
 }
 

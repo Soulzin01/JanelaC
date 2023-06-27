@@ -6,10 +6,10 @@
 
 int main()
 {
-    char nome[26], peso[5]; // Inicialização das variáveis que serão passadas nas funções de leitura
-    int idade; // Inicialização das variáveis que serão passadas nas funções de leitura
+    char nome[26], peso[5]; 
+    int idade;
     extern int valorY;
-    inicializar_tela(); //Inicialização da tela utilizando os parâmetros que foram recebidos
+    inicializar_tela();
 
     label(2, 2, "Nome: ");
     label(2, 3, "Idade: ");
