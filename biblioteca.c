@@ -4,19 +4,27 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <math.h>
+#include <windows.h>
 
 void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
 
 void inicializar_tela(){
+    SMALL_RECT windowSize = {0 , 0 , 80, 24};
+    SetConsoleWindowInfo(GetStdHandle(STD_OUTPUT_HANDLE), TRUE, &windowSize);
+
     int borda;
     char titulo[24];
+    int valorX, valorY;
     printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)\n");
     scanf("%d", &borda);
+    fflush(stdin);
+    printf("Digite o tamanho da janela: (Largura Altura)");
+    scanf("%[^|]d%[^|]d", &valorX, &valorY);
     fflush(stdin);
     printf("Digite o título que estará na parte superior da página:\n");
     fgets(titulo, sizeof(titulo), stdin);
     system("cls"); // limpa a tela
-    janela(1, 1, 80, 24, titulo, borda);
+    janela(1, 1, valorX, valorY, titulo, borda);
 }
 
 void janela(int xInicial, int yInicial, int xFinal, int yFinal, char titulo[20], int tipoMold)
