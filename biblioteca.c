@@ -6,6 +6,8 @@
 #include <math.h>
 #include <windows.h>
 
+int valorX, valorY;
+
 void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
 
 void inicializar_tela(){
@@ -14,12 +16,11 @@ void inicializar_tela(){
 
     int borda;
     char titulo[24];
-    int valorX, valorY;
     printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)\n");
     scanf("%d", &borda);
     fflush(stdin);
     printf("Digite o tamanho da janela: (Largura Altura)");
-    scanf("%[^|]d%[^|]d", &valorX, &valorY);
+    scanf("%d %d", &valorX, &valorY);
     fflush(stdin);
     printf("Digite o título que estará na parte superior da página:\n");
     fgets(titulo, sizeof(titulo), stdin);
