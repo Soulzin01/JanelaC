@@ -6,7 +6,7 @@
 #include <math.h>
 #include <windows.h>
 
-int valorX, valorY;
+int valorY;
 
 void gotoxy(int x, int y) { printf("\033[%d;%dH", y, x); }
 
@@ -14,7 +14,7 @@ void inicializar_tela(){
     SMALL_RECT windowSize = {0 , 0 , 80, 24};
     SetConsoleWindowInfo(GetStdHandle(STD_OUTPUT_HANDLE), TRUE, &windowSize);
 
-    int borda;
+    int borda, valorX;
     char titulo[24];
     printf("Escolha o formato da borda: (0 - Borda simples | 1 - Borda dupla)\n");
     scanf("%d", &borda);
